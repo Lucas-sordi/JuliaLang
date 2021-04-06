@@ -1,4 +1,7 @@
-#loop while - printar os numeros pares de 0 a 10
+# Linguagem : Julia
+# Componentes : Julio Cesar, Leonardo e Lucas
+
+# Loop (while) - Printa os numeros pares de 0 a 10
 println("--- LOOP WHILE - PARES DE 0 A 10---")
 i = 0 
     while i <= 10
@@ -7,16 +10,16 @@ i = 0
     end
 
 
-#loop for - printar os números impares de 10 a 20 + uso do escape "continue"
+# Loop (for) - Printa os números impares de 10 a 20 + uso do "continue"
 println("--- LOOP FOR - IMPARES DE 10 A 20 USANDO CONTINUE ---")
 for j = 10:20
     if j % 2 == 0
         continue
     end
-     println(j)
+    println(j)
 end
 
-#loop while - printar os números de 0 a 20 + uso do escape "break"
+# Loop (while) - Printa os números de 0 a 20 + uso do "break"
 println("--- LOOP WHILE - 0 A 20 USANDO BREAK ---")
 k = 0
     while true
@@ -28,7 +31,7 @@ k = 0
      end
 
 
-#escape return usado dentro de uma função
+# (return) - Usado para devolver o resultado da funcao
 println("--- FUNÇÃO USANDO O RETURN ---")
 function multiplicacao(x,y)
     return x * y

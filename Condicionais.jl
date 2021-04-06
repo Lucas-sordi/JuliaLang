@@ -1,4 +1,7 @@
-#else, elseif e if para testar se a é maior, menor ou igual a b
+# Linguagem : Julia
+# Componentes : Julio Cesar, Leonardo e Lucas
+
+# if, elseif, else - Casos de teste comparando valores
 a = 20 
 b = 20
 
@@ -13,8 +16,7 @@ end
 
 
 
-# operador ternário testa se a soma de c e d é maior que 30
-
+# Operador Ternário - Caso de teste comparando valores
 println("--- USO DO OPERADOR TERNÁRIO ---")
 c = 10
 d = 25
