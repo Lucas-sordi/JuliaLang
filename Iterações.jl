@@ -1,4 +1,7 @@
-#loop while - printar os numeros pares de 0 a 10
+# Linguagem : Julia
+# Componentes : Julio Cesar, Leonardo e Lucas
+
+# Loop (while) - Printa os numeros pares de 0 a 10
 println("--- LOOP WHILE - PARES DE 0 A 10---")
 i = 0 
     while i <= 10
@@ -7,51 +10,49 @@ i = 0
     end
 
 
-#loop while - printar os números de 0 a 20 + uso do escape "break"
+# Loop (while) - Printa os números de 0 a 20 + uso do "break"
 println("\n --- LOOP WHILE - 0 A 20 USANDO BREAK ---")
-k = 0
+j = 0
     while true
-        println(k)
-        if k >= 20
+        println(j)
+        if j >= 20
             break
         end
-        global k += 1
+        global j += 1
      end
 
 
-#loop range for - printar os números impares de 10 a 20 + uso do escape "continue"
+# Loop (range for) - Printa os números impares de 10 a 20 + uso do "continue"
 println("\n --- LOOP RANGE FOR - IMPARES DE 10 A 20 USANDO CONTINUE ---")
-    for j = 10:20
-        if j % 2 == 0
-            continue
-        end
-        println(j)
+for k = 10:20
+    if k % 2 == 0
+        continue
     end
+    println(k)
+end
 
 
-#loop each for - printar todos os elementos pares do array
-    println("\n --- LOOP EACH FOR - ELEMENTOS PARES DO ARRAY ---")
-    for l in [5, 10, 15, 20, 25, 30, 35]
-        if l % 2 == 0
-        println(l)
-        end
+# Loop (each for) - Printa todos os elementos pares do array
+println("\n --- LOOP EACH FOR - ELEMENTOS PARES DO ARRAY ---")
+for l in [5, 10, 15, 20, 25, 30, 35]
+    if l % 2 == 0
+    println(l)
     end
+end
 
-
-
-#escape return usado dentro de uma função
-    println("\n --- FUNÇÃO USANDO O RETURN ---")
-    function multiplicacao(x,y)
-        return x * y
-    end
-
-println(multiplicacao(10,20))
-
-
-#loop range for - uma matriz pode ser feita de maneira simples com o range for"
-println("\n --- LOOP FOR - MOSTRAR TODOS OS ELEMENTOS DA MATRIZ 5X5 EM QUE X > Y ---")
+#Loop (range for) - uma matriz pode ser feita de maneira simples com o range for"
+println("\n --- LOOP RANGE FOR - MOSTRAR TODOS OS ELEMENTOS DA MATRIZ 5X5 EM QUE X > Y ---")
     for m = 1:5, n = 1:5
         if m > n
             println((m, n))
         end
     end
+
+
+# (return) - Usado para devolver o resultado da funcao
+println("\n --- FUNÇÃO USANDO O RETURN ---")
+function multiplicacao(x,y)
+    return x * y
+end
+
+println(multiplicacao(10,20))
