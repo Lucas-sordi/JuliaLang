@@ -12,8 +12,6 @@ function somatorioNumeros(i, f)
     return soma
 end
 
-# Passamos 1 e 20 como parametros para i e f
+# Passamos 1 e 20 como parametros para i e f, respectivamente
 total = somatorioNumeros(1, 20)
 println("Somatorio entre o intervalo dos valores passados para a funcao, igual a  ", + total)
-
-# Passagem de palavras-chave
