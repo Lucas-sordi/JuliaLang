@@ -1,4 +1,12 @@
 
+# OPERADOR TERNARIO MOSTRAR NO FINAL
+a = 50
+b = 10
+c = 20
+d = 55
+
+println(a > d ? b : c)
+
 # Loop (while) - Printa os números de 1 a 20 para isso ocorre uso do "break quando chegar a 20 ele cai fora do laço"
 println("\n --- LOOP WHILE - 0 A 20 USANDO BREAK ---")
 j = 1
