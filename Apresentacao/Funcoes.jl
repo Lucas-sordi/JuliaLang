@@ -1,10 +1,14 @@
-
+using Statistics
 # Passagem de parametros é de forma sequencial
+# Funcao padrao
 function soma(x::Float64, y::Int64)
-    x + y
+    println(x + y)
 end
 
-# soma(5.0, 5) Resultado 10 os valores passados sao correspondentes com os pedidos nos parametros da funcao
+#Funcao resumida que possui um metodo apenas
+soma(x, y) = println(x + y)
+
+soma(5.0, 5) #Resultado 10 os valores passados sao correspondentes com os pedidos nos parametros da funcao
 # soma(5, 10.2) Vai ocorre um erro de nao correspondencia de valores
 
 # Funcao usada para somar numero em un intervalo de tempo
@@ -74,9 +78,9 @@ parametrico(12.4)
 
 
 println("FIBONACCI")
-function fib( n :: Int32 ):: Int32
+function fib(n::Int64)
     if n == 0
-        println("Num deve ser maio que 0")
+        return println("Num deve ser maio que 0")
     elseif n < 2
         return n
     else
@@ -84,30 +88,43 @@ function fib( n :: Int32 ):: Int32
     end
 end
 
-#= a = fib(5) --- fazer para varios valores
-println(a) =#
+a = fib(5) #fazer para varios valores
+println(a)
 
 println("FATORIAL")
 function fact(n)
     if n == 1
-        n
+        return n
     else
-        n * fact(n-1)
+        return n * fact(n-1)
     end
 end
 
-# a = fact(5)
+a = fact(5)
 # a = fact(big(50)) --- acima de 20 colocar o 'big', abaixo pode deixar sme
-# println(a) 
+println(a) 
 
 # Metodo map primeiro sua expressao depois o vetor que ela vai alterar
 println(map(round, [5.4, 3.4, 6.8]))
 
 arrayMap = [1,2,3,4,5,6,7,9]
-print(map(x -> x^2, arrayMap))
+println(map(x -> x^2, arrayMap))
 
 # Tambem pode ser usada uma funcao pronta implementada para usar o map e a partir dela modificar os valores
-function multiplicaValores(y::Int)
-    y *= y+1
+function multiplicaValores(x::Int)
+    x^2
 end
-map(multiplicaValores, arrayMap)
+println(map(multiplicaValores, arrayMap))
+
+# Operdador ternario na funcao
+maior(a, b) = a > b ? a : b
+println("Operador ternario maior numero ", maior(10, 5))
+
+# funcoes especificas do pacotes Statistics
+# calcula o meio entre o intervalo passado
+println(mean(1:10))
+
+# calcula a media dos valores passados dentro do vetor
+# um exemplo desta funcao que ela seria util para calcular a media de provas e trabalhos mais facil
+arrayMedia = [6.1, 7.6]
+println(median(arrayMedia))
