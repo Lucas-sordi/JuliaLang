@@ -36,4 +36,12 @@ println(a) =#
 
 
 
+
+
+#= for i in a
+    println("Elemento: ", i)
+
+end =#
+
+
 # https://www.geeksforgeeks.org/arrays-in-julia/
